@@ -1,0 +1,378 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+.hero {
+    background: linear-gradient(to bottom right, #007bff, #00b4d8);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5em;
+    margin: 0;
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Menu de navegação */
+.nav-bar {
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00e676;
+}
+
+/* Sobre */
+.sobre {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Projetos */
+.projetos {
+    padding: 20px;
+}
+
+.trabalhos {
+    text-align: center;
+    color: #007bff;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 500px; /* Define a altura máxima */
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: cover; /* Ajusta a imagem para caber no espaço disponível */
+}
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Contato */
+.contato {
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.contato h2 {
+    margin-bottom: 15px;
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #25d366;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-link:hover {
+    background-color: #1caa56;
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+.whatsapp-link img {
+    width: 30px; /* Ajuste o tamanho do ícone do WhatsApp */
+    height: auto;
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Animações */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Lightbox image */
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close button */
+.lightbox-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Adiciona um scroll suave para toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Menu de navegação */
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00e676;
+}
+
+.depoimentos {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.depoimentos h2 {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.depoimentos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.depoimento-item {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.depoimento-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.depoimento-item h4 {
+    font-weight: 600;
+}
+
+/* Adicionando animações */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.habilidades {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.habilidades h2 {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.habilidade-item {
+    margin-bottom: 20px;
+}
+
+.barra {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.barra {
+    background-color: #00e676;
+}
+
+/* Estilo para a seção de serviços */
+.servicos {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.servicos h2 {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Estilo para cada item de serviço */
+.servico-item {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Efeito de hover para ampliar e adicionar sombra */
+.servico-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o ícone */
+.servico-item i {
+    color: #007bff;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover para os ícones */
+.servico-item:hover i {
+    color: #00e676;
+}
+
+/* Estilo para o título do serviço */
+.servico-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Estilo para a descrição do serviço */
+.servico-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
